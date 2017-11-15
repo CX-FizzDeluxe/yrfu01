@@ -14,12 +14,12 @@ public class FizzBuzz {
         String numberStr = number.toString();
         if(number%15 == 0){
             return FIZZ_BUZZ;
-        } else if(number%5 == 0){
+        } else if(number%5 == 0 || numberStr.contains(FIVE)){
             return numberStr.contains(THREE)?FIZZ_BUZZ:BUZZ;
-        }else if(number%3 == 0){
+        }else if(number%3 == 0 || numberStr.contains(THREE)){
             return numberStr.contains(FIVE)?FIZZ_BUZZ:FIZZ;
         }else {
-            return numberStr.contains(FIVE)?BUZZ:(numberStr.contains(THREE)?FIZZ:number.toString());
+            return number.toString();
         }
     }
 

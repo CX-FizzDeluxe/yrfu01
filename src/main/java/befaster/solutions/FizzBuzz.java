@@ -18,14 +18,8 @@ public class FizzBuzz {
         boolean isDeluxe = number > 10 && numberStr.replaceAll(numberStr.substring(0,1),"").equals("");
         StringBuilder builder = new StringBuilder();
 
-        if(isDeluxe){
-            if(number%15 == 0 || numberStr.contains(FIVE) && numberStr.contains(THREE)){
-                builder.append(FIZZ).append(" ").append(BUZZ).append(" ").append(DELUXE);
-            }else{
-                builder.append(DELUXE);
-            }
-        }
-        else if(number%15 == 0){
+
+        if(number%15 == 0){
             builder.append(FIZZ).append(" ").append(BUZZ);
         } else if(number%5 == 0 || numberStr.contains(FIVE)){
             if(number%3==0 || numberStr.contains(THREE)){
@@ -39,9 +33,13 @@ public class FizzBuzz {
             }else{
                 builder.append(FIZZ);
             }
-        }else{
+        }
+        if(isDeluxe){
+            builder.append(" ").append(DELUXE);
+        }
+        if(builder.length() == 0){
             builder.append(numberStr);
         }
-        return builder.toString();
+        return builder.toString().trim();
     }
 }

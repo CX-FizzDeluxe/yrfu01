@@ -16,9 +16,9 @@ public class FizzBuzz {
     public static String fizzBuzz(Integer number) {
         String numberStr = number.toString();
         boolean isDeluxe = number > 10 && numberStr.replaceAll(numberStr.substring(0,1),"").equals("");
-        System.out.println(isDeluxe);
+        StringBuilder builder = new StringBuilder();
         if(number%15 == 0){
-            return FIZZ_BUZZ;
+            builder.append(FIZZ).append(" ").append(BUZZ);
         } else if(number%5 == 0){
             return numberStr.contains(THREE)?FIZZ_BUZZ:BUZZ;
         }else if(number%3 == 0){
@@ -30,13 +30,15 @@ public class FizzBuzz {
         }else {
             return number.toString();
         }
+        if(isDeluxe){
+            builder.append(" ").append(DELUXE);
+        }
+        return builder.toString().trim();
     }
 
     public static void main(String[] args) {
-        fizzBuzz(1);
-        fizzBuzz(101);
-        fizzBuzz(11);
-        fizzBuzz(9999999);
+
+        System.out.println(fizzBuzz(5555555));
     }
 
 }

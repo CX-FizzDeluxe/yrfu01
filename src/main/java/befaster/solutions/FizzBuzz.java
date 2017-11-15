@@ -19,9 +19,9 @@ public class FizzBuzz {
         }else if(number%3 == 0){
             return numberStr.contains(FIVE)?FIZZ_BUZZ:FIZZ;
         }else if(numberStr.contains(FIVE)){
-            return number%3 == 0?FIZZ_BUZZ:BUZZ;
+            return numberStr.contains(THREE)?FIZZ_BUZZ:BUZZ;
         }else if(numberStr.contains(THREE)){
-            return number%5 == 0?FIZZ_BUZZ:FIZZ;
+            return numberStr.contains(FIVE)?FIZZ_BUZZ:FIZZ;
         }else {
             return number.toString();
         }

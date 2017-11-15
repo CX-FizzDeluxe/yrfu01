@@ -44,13 +44,4 @@ public class FizzBuzz {
         }
         return builder.toString();
     }
-
-    public static void main(String[] args) {
-
-        System.out.println(fizzBuzz(5555555));
-        System.out.println(fizzBuzz(1));
-        System.out.println(fizzBuzz(333));
-        System.out.println(fizzBuzz(395));
-    }
-
 }

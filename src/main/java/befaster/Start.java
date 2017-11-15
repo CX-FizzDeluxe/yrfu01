@@ -16,7 +16,7 @@ public class Start {
      * ~~~~~~~~~~ Running the system: ~~~~~~~~~~~~~
      *
      *   From command line:
-     *      ./gradlew run -Daction=$ACTION
+     *       -Daction=$ACTION
      *
      *   From IDE:
      *      Set the value of the `actionIfNoArgs`

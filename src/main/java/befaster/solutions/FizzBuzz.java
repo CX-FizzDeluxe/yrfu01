@@ -13,9 +13,7 @@ public class FizzBuzz {
     public static String fizzBuzz(Integer number) {
         String numberStr = number.toString();
 
-        if(number%15 == 0){
-            return FIZZ_BUZZ;
-        }else if(number%5 == 0){
+        if(number%5 == 0){
             return numberStr.contains(THREE)?FIZZ_BUZZ:BUZZ;
         }else if(number%3 == 0){
             return numberStr.contains(FIVE)?FIZZ_BUZZ:FIZZ;
